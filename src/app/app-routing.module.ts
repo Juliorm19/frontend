@@ -16,7 +16,7 @@ import { AreaClientesComponent } from './pages/area-clientes/area-clientes.compo
 // Placeholder para páginas que aún no existen pero están en el footer
 const PlaceholderComponent = HomeComponent; // O crea un componente simple
 const enterprise = 'PYAM';
-const routes: Routes = [
+export const routes: Routes = [
   { path: 'home', component: HomeComponent, title: 'Inicio - ' + enterprise },
   { path: 'rrhh', component: RrhhComponent, title: 'Recursos Humanos - ' + enterprise },
   { path: 'operaciones', component: OperacionesComponent, title: 'Operaciones - ' + enterprise},
