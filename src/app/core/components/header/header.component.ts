@@ -19,7 +19,7 @@ export class HeaderComponent {
   areaClientesEnabled = true; // Cambia a false si no aplica
 
   navItems: NavItem[] = [
-    { label: 'Inicio', link: '/' },
+    { label: 'Inicio', link: '/home' },
     { label: 'RRHH', link: '/rrhh' },
     { label: 'Operaciones', link: '/operaciones' },
     { label: 'Registro OS', link: '/registro-os' },

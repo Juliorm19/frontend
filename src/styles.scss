@@ -1,13 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
 
+
+// Paleta de colores personalizada
+:root {
+  --color-primario-naranja: #FF6600; // Un naranja vibrante
+  --color-secundario-negro: #212529; // Negro Bootstrap o uno personalizado
+  --color-texto-claro: #f8f9fa;     // Blanco/gris muy claro para texto sobre fondos oscuros
+  --color-fondo-claro: #FFFFFF;
+  --color-borde-sutil: #dee2e6;
+}
 
 // Variables personalizadas de Bootstrap (opcional, antes de importar bootstrap)
 // $primary: #your-brand-color;
 
 body {
-  font-family: 'Roboto', sans-serif; // Elige una fuente moderna
-  color: #333;
+  font-family: 'Roboto', sans-serif; 
+  background-color: var(--color-fondo-claro);
+  color: var(--color-secundario-negro);
 }
+
 
 .section-padding {
   padding: 60px 0;
@@ -27,8 +37,8 @@ body {
   padding: 10px 25px;
   font-weight: bold;
   &:hover {
-    background-color: darken(#007bff, 10%);
-    border-color: darken(#007bff, 10%);
+    background-color: #007bff, 10%;
+    border-color: #007bff;
   }
 }
 
@@ -38,8 +48,8 @@ body {
   color: white;
   padding: 10px 25px;
   &:hover {
-    background-color: darken(#6c757d, 10%);
-    border-color: darken(#6c757d, 10%);
+    background-color: (#6c757d);
+    border-color: (#6c757d);
   }
 }
 
@@ -66,4 +76,34 @@ app-footer {
     font-size: 1.5rem;
     margin: 0 10px;
   }
+}
+
+
+
+// Botón personalizado naranja
+.btn-custom-orange {
+  background-color: var(--color-primario-naranja);
+  border-color: var(--color-primario-naranja);
+  color: var(--color-texto-claro);
+
+  &:hover, &:focus {
+    background-color: var(--color-primario-naranja);
+    border-color: var(--color-primario-naranja);
+    color: var(--color-texto-claro);
+  }
+}
+
+// Tarjetas con acento naranja
+.card-accent-orange {
+  border-left: 5px solid var(--color-primario-naranja);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Títulos con acento
+.title-accent {
+  color: var(--color-primario-naranja);
 }

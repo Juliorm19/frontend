@@ -17,7 +17,7 @@ import { AreaClientesComponent } from './pages/area-clientes/area-clientes.compo
 const PlaceholderComponent = HomeComponent; // O crea un componente simple
 const enterprise = 'PYAM';
 const routes: Routes = [
-  { path: '', component: HomeComponent, title: 'Inicio - ' + enterprise },
+  { path: 'home', component: HomeComponent, title: 'Inicio - ' + enterprise },
   { path: 'rrhh', component: RrhhComponent, title: 'Recursos Humanos - ' + enterprise },
   { path: 'operaciones', component: OperacionesComponent, title: 'Operaciones - ' + enterprise},
   { path: 'registro-os', component: RegistroOsComponent, title: 'Registro OS - ' + enterprise},

@@ -1,0 +1,10 @@
+
+
+.container-fluid {
+  max-width: 1400px; // O el ancho que prefieras para tu contenido principal
+}
+
+// Asegurar que el texto dentro de las tarjetas de dashboard sea negro o gris oscuro
+.card .card-title, .card .display-4 {
+  color: var(--color-secundario-negro, #333);
+}
