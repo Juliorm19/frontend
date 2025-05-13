@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
     <a class="navbar-brand" routerLink="/">
-      <img src="assets/logo.png" alt="Logo Empresa" height="40"> <!-- Asegúrate de tener assets/logo.png -->
+      <img src="assets/logo.png" alt="PYAM" height="40"> <!-- Asegúrate de tener assets/logo.png -->
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
       <span class="navbar-toggler-icon"></span>
@@ -13,16 +13,36 @@
         </li>
         <li class="nav-item dropdown" *ngIf="areaClientesEnabled">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCliente" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Área de Clientes
+            Contabilidad
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownCliente">
-            <li><a class="dropdown-item" routerLink="/area-clientes" (click)="closeNavbar()">Acceder</a></li>
+            <li><a class="dropdown-item" routerLink="/pre-facturas" (click)="closeNavbar()">Pre-Facturas</a></li>
             <!-- Más opciones si es necesario -->
           </ul>
         </li>
+        <li class="nav-item dropdown" *ngIf="areaClientesEnabled">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownOperaciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Maquinas
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownCliente">
+            <li><a class="dropdown-item" routerLink="/arqueo-briq" (click)="closeNavbar()">Arqueo Briq</a></li>
+            <li><a class="dropdown-item" routerLink="/gps" (click)="closeNavbar()">GPS</a></li>
+            <li><a class="dropdown-item" routerLink="/operativa" (click)="closeNavbar()">Operativa</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown" *ngIf="areaClientesEnabled">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownOperaciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Operaciones
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownCliente">
+            <li><a class="dropdown-item" routerLink="/operaciones" (click)="closeNavbar()">Operaciones</a></li>
+            <li><a class="dropdown-item" routerLink="/registro-os" (click)="closeNavbar()">Registro OS</a></li>
+            <li><a class="dropdown-item" routerLink="/registro-as" (click)="closeNavbar()">Registro AS</a></li>
+          </ul>
+        </li>
       </ul>
-      <button class="btn btn-primary-custom ms-lg-3" (click)="solicitarPresupuesto()">
-        Solicitar Presupuesto
+      <button class="btn ms-md-3" style="background-color: #FF6600;" (click)="solicitarPresupuesto()">
+        Log out
       </button>
     </div>
   </div>

@@ -18,7 +18,7 @@ interface QuickAccessItem {
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  userName: string = 'NombreUsuario'; // Esto vendría de un servicio de autenticación
+  userName: string = 'PYAM'; // Esto vendría de un servicio de autenticación
   currentDate: Date = new Date();
 
   quickAccessItems: QuickAccessItem[] = [

@@ -21,14 +21,6 @@ export class HeaderComponent {
   navItems: NavItem[] = [
     { label: 'Inicio', link: '/home' },
     { label: 'RRHH', link: '/rrhh' },
-    { label: 'Operaciones', link: '/operaciones' },
-    { label: 'Registro OS', link: '/registro-os' },
-    { label: 'Registro AS', link: '/registro-as' },
-    { label: 'Pre-Facturas', link: '/pre-facturas' },
-    { label: 'Arqueo de Briq', link: '/arqueo-briq' },
-    { label: 'GPS', link: '/gps' },
-    { label: 'Operativa', link: '/operativa' },
-    { label: 'Contacto', link: '/contacto' }
   ];
 
   constructor(private router: Router) {}

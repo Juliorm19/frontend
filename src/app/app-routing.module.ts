@@ -17,6 +17,8 @@ import { AreaClientesComponent } from './pages/area-clientes/area-clientes.compo
 const PlaceholderComponent = HomeComponent; // O crea un componente simple
 const enterprise = 'PYAM';
 export const routes: Routes = [
+  { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)},
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent, title: 'Inicio - ' + enterprise },
   { path: 'rrhh', component: RrhhComponent, title: 'Recursos Humanos - ' + enterprise },
   { path: 'operaciones', component: OperacionesComponent, title: 'Operaciones - ' + enterprise},
@@ -30,7 +32,7 @@ export const routes: Routes = [
   { path: 'area-clientes', component: AreaClientesComponent, title: 'Área de Clientes - ' + enterprise }, // Opcional
   { path: 'politica-privacidad', component: PlaceholderComponent, title: 'Política de Privacidad' }, // Ejemplo
   { path: 'terminos-servicio', component: PlaceholderComponent, title: 'Términos de Servicio' }, // Ejemplo
-  { path: '**', redirectTo: '', pathMatch: 'full' } // Wildcard route para 404 (redirige a inicio)
+  { path: '**', redirectTo: '/auth/login', pathMatch: 'full' } // Wildcard route para 404 (redirige a inicio)
 ];
 
 @NgModule({
